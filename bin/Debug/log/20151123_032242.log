@@ -1,0 +1,16 @@
+03:22:43.107 | Robot.SettingsEngine | Загрузка стратегий из DbStrategies.xml
+03:22:44.480 | Robot.MainWindow | Добавлена стратегия 'BSS'
+03:22:44.494 | Robot.SettingsEngine | Сохранение стратегий в HustleEveryDayStrategies.xml
+03:22:45.231 | Robot.SettingsEngine | Сохранение стратегий в DbStrategies.xml
+03:22:45.419 | Robot.SettingsEngine | Загрузка стратегий тестирования из DbTesting.xml
+03:22:45.420 | Robot.SettingsEngine | Загрузка стратегий из HustleEveryDayStrategies.xml
+03:22:45.441 | Robot.SettingsEngine | Загрузка стратегий тестирования из TestingHustleEveryDayStrategies.xml
+03:22:47.038 | Robot.MainWindow | Robot - 4.0.0
+03:24:14.001 | Robot.MainWindow | Добавлена стратегия 'BSS'
+03:24:14.006 | Robot.SettingsEngine | Сохранение стратегий в HustleEveryDayStrategies.xml
+03:24:14.011 | Robot.SettingsEngine | Сохранение стратегий в DbStrategies.xml
+03:26:38.664 | Robot.MainWindow | Добавлена стратегия 'BSS'
+03:26:38.666 | Robot.SettingsEngine | Сохранение стратегий в HustleEveryDayStrategies.xml
+03:26:38.669 | Robot.SettingsEngine | Сохранение стратегий в DbStrategies.xml
+03:27:32.543 | Robot.SettingsEngine | Сохранение стратегий в HustleEveryDayStrategies.xml
+03:27:32.545 | Robot.SettingsEngine | Сохранение стратегий в DbStrategies.xml

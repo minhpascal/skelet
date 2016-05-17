@@ -1,0 +1,150 @@
+﻿<Window x:Class="Robot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		xmlns:Robot="clr-namespace:Robot"
+		xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:sx="clr-namespace:StockSharp.Xaml;assembly=StockSharp.Xaml"
+        Title="Robot" Height="544" Width="850" Loaded="Window_Loaded" Closing="Window_Closing">
+	<Window.CommandBindings>
+		<CommandBinding Command="{x:Static Robot:MainWindow.ConnectCommand}"
+                    Executed="ExecutedConnect"
+                    CanExecute="CanExecuteConnect" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.DisconnectCommand}"
+                    Executed="ExecutedDisconnect"
+                    CanExecute="CanExecuteDisconnect" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.AddStrategyCommand}"
+                    Executed="ExecutedAddStrategy"
+                    CanExecute="CanExecuteAddStrategy" />
+        <CommandBinding Command="{x:Static Robot:MainWindow.AddHustleStrategyCommand}"
+                    Executed="ExecutedAddHustleStrategy"
+                    CanExecute="CanExecuteAddHustleStrategy" />
+
+
+        <CommandBinding Command="{x:Static Robot:MainWindow.RemoveStrategyCommand}"
+                    Executed="ExecutedRemoveStrategy"
+                    CanExecute="CanExecuteRemoveStrategy" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.StartStrategyCommand}"
+                    Executed="ExecutedStartStrategy"
+                    CanExecute="CanExecuteStartStrategy" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.StartAllStrategiesCommand}"
+                    Executed="ExecutedStartAllStrategies"
+                    CanExecute="CanExecuteStartAllStrategies" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.StopStrategyCommand}"
+                    Executed="ExecutedStopStrategy"
+                    CanExecute="CanExecuteStopStrategy" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.StopStrategyToCashCommand}"
+                    Executed="ExecutedStopStrategyToCash"
+                    CanExecute="CanExecuteStopStrategyToCash" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.ExitCommand}"
+                    Executed="ExecutedExit"
+                    CanExecute="CanExecuteExit" />
+
+		<CommandBinding Command="{x:Static Robot:MainWindow.SettingsCommand}"
+                    Executed="ExecutedSettings"
+                    CanExecute="CanExecuteSettings" />
+        
+        <CommandBinding Command="{x:Static Robot:MainWindow.AddTestingStrategyCommand}"
+            Executed="ExecutedAddTestingStrategy"
+            CanExecute="CanExecuteAddTestingStrategy" />
+
+        <CommandBinding Command="{x:Static Robot:MainWindow.RemoveTestingStrategyCommand}"
+                    Executed="ExecutedRemoveTestingStrategy"
+                    CanExecute="CanExecuteRemoveTestingStrategy" />
+
+        <CommandBinding Command="{x:Static Robot:MainWindow.StartTestingStrategyCommand}"
+                    Executed="ExecutedStartTestingStrategy"
+                    CanExecute="CanExecuteStartTestingStrategy" />
+
+        <CommandBinding Command="{x:Static Robot:MainWindow.StopTestingStrategyCommand}"
+                    Executed="ExecutedStopTestingStrategy"
+                    CanExecute="CanExecuteStopTestingStrategy" />
+
+        <CommandBinding Command="{x:Static Robot:MainWindow.TestingReportCommand}"
+                    Executed="ExecutedTestingReport"
+                    CanExecute="CanExecuteTestingReport" />
+
+    </Window.CommandBindings>
+
+	<Window.InputBindings>
+		<KeyBinding Modifiers="Control" Key="P" Command="{x:Static Robot:MainWindow.SettingsCommand}"/>
+		<KeyBinding Modifiers="Control+Shift" Key="C" Command="{x:Static Robot:MainWindow.ConnectCommand}"/>
+		<KeyBinding Modifiers="Control+Shift" Key="Z" Command="{x:Static Robot:MainWindow.DisconnectCommand}"/>
+	</Window.InputBindings>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<Menu Grid.Row="0" IsMainMenu="True">
+			<MenuItem Header="Сис_тема">
+				<MenuItem Header="Подключиться" InputGestureText="Ctrl+Shift+C" x:Name="MenuItemConnection" Command="{x:Static Robot:MainWindow.ConnectCommand}" />
+				<MenuItem Header="Отключиться" InputGestureText="Ctrl+Shift+Z" Command="{x:Static Robot:MainWindow.DisconnectCommand}" />
+				<Separator/>
+				<MenuItem Header="Настройки" InputGestureText="Ctrl+P" Command="{x:Static Robot:MainWindow.SettingsCommand}" />
+				<Separator/>
+				<MenuItem Header="Выход" Command="{x:Static Robot:MainWindow.ExitCommand}"/>
+			</MenuItem>
+			<MenuItem Header="_Стратегии">
+				<MenuItem Header="Старт" Command="{x:Static Robot:MainWindow.StartStrategyCommand}" />
+				<MenuItem Header="Стоп" Command="{x:Static Robot:MainWindow.StopStrategyCommand}" />
+				<MenuItem Header="Стоп (закрыть позиции)" Command="{x:Static Robot:MainWindow.StopStrategyToCashCommand}" />
+				<Separator/>
+				<MenuItem Header="Добавить" Command="{x:Static Robot:MainWindow.AddStrategyCommand}"/>
+                <MenuItem Header="Добавить хассол" Command="{x:Static Robot:MainWindow.AddHustleStrategyCommand}"/>
+				<MenuItem Header="Удалить" Command="{x:Static Robot:MainWindow.RemoveStrategyCommand}"/>
+				<Separator/>
+				<MenuItem Header="Старт Все" Command="{x:Static Robot:MainWindow.StartAllStrategiesCommand}" />
+			</MenuItem>
+            <MenuItem Header="_Тестирование">
+				<MenuItem Header="Старт" Command="{x:Static Robot:MainWindow.StartTestingStrategyCommand}" />
+				<MenuItem Header="Стоп" Command="{x:Static Robot:MainWindow.StopTestingStrategyCommand}" />
+                <Separator/>
+                <MenuItem Header="Добавить" Command="{x:Static Robot:MainWindow.AddTestingStrategyCommand}"/>
+                <MenuItem Header="Удалить" Command="{x:Static Robot:MainWindow.RemoveTestingStrategyCommand}"/>
+                <Separator/>
+                <MenuItem Header="Отчет" Command="{x:Static Robot:MainWindow.TestingReportCommand}" />
+            </MenuItem>
+        </Menu>
+
+		<xcad:DockingManager Grid.Row="1" x:Name="dockManager" AllowMixedOrientation="True">
+			<xcad:DockingManager.Theme>
+				<xcad:MetroTheme/>
+            </xcad:DockingManager.Theme>
+
+			<xcad:LayoutRoot>
+				<xcad:LayoutPanel Orientation="Vertical">
+					<xcad:LayoutDocumentPaneGroup >
+						<xcad:LayoutDocumentPane x:Name="StrategiesDocumentPane"/>
+                    </xcad:LayoutDocumentPaneGroup>
+					<xcad:LayoutDocumentPaneGroup xcad:DockHeight="200">
+						<xcad:LayoutDocumentPane>
+							<xcad:LayoutDocument ContentId="document1" Title="Сообщения" CanClose="False">
+                                <sx:LogControl x:Name="LogControl" MaxItemsCount="3000" 
+                                            AutoResize="True" TimeFormat="yy/MM/dd HH:mm:ss.fff"/>
+                            </xcad:LayoutDocument>
+							<xcad:LayoutDocument ContentId="document2" Title="Стратегии" CanClose="False">
+                                <Robot:StrategiesInfoGrid x:Name="AllStrategies" />
+                            </xcad:LayoutDocument>
+                        </xcad:LayoutDocumentPane>
+                    </xcad:LayoutDocumentPaneGroup>
+                </xcad:LayoutPanel>
+            </xcad:LayoutRoot>
+        </xcad:DockingManager>
+
+		<StatusBar Grid.Row="2" x:Name="StatusBarMain">
+			<TextBlock x:Name="TextBlockConnectionType">Альфа-Директ</TextBlock>
+			<Separator/>
+			<TextBlock x:Name="TextBlockConnectionState">Отключен</TextBlock>
+		</StatusBar>
+	</Grid>
+</Window>

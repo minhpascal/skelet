@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Robot.StrategiesInfoGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:OpenSpreader="clr-namespace:Robot" mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="600" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+	
+	<UserControl.Resources>
+		<OpenSpreader:ProcessStateToColorConverter x:Key="stateToColorConverter" />		
+	</UserControl.Resources>
+	
+    <Grid>
+		<ListView Grid.Row="0" x:Name="ListViewStrategies" x:FieldModifier="public" SelectionMode="Single" SelectedIndex="0" >
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Width="140" Header="Name">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=Params.Name}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="70" Header="State">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=ProcessState}" TextAlignment="Right" Background="{Binding Path=ProcessState, Converter={StaticResource ResourceKey=stateToColorConverter}}"/>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="50" Header="Trades">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=MyTrades.Count}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="50" Header="Orders">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=Orders.Count}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="45" Header="Position">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=Position}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="60" Header="P&amp;L">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=PnL, StringFormat=F2}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="60" Header="Slippage">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Path=Slippage, StringFormat=F2}" TextAlignment="Right" />
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+					<GridViewColumn Width="70" Header="Time" DisplayMemberBinding="{Binding Path=WorkingTime, StringFormat=hh\\:mm\\:ss}" />
+
+					<GridViewColumn Width="70" Header="Price" DisplayMemberBinding="{Binding Path=LastTradePrice, StringFormat=F2}" />
+				</GridView>
+			</ListView.View>
+		</ListView>
+	</Grid>
+</UserControl>

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D85C6BCD-FFF8-4ACC-A416-593B98274CA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shell</RootNamespace>
+    <AssemblyName>Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\References\stocksharp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClrPatch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\ClrPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Collections">
+      <HintPath>..\References\Ecng.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Common">
+      <HintPath>..\References\Ecng.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.ComponentModel">
+      <HintPath>..\References\Ecng.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Serialization">
+      <HintPath>..\References\Ecng.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Xaml">
+      <HintPath>..\References\Ecng.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\References\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless">
+      <HintPath>..\References\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.AlfaDirect">
+      <HintPath>..\References\StockSharp.AlfaDirect.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Algo">
+      <HintPath>..\References\StockSharp.Algo.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Algo.Strategies">
+      <HintPath>..\References\StockSharp.Algo.Strategies.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.BusinessEntities">
+      <HintPath>..\References\StockSharp.BusinessEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Logging">
+      <HintPath>..\References\StockSharp.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Messages">
+      <HintPath>..\References\StockSharp.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Quik">
+      <HintPath>..\References\StockSharp.Quik.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Xaml">
+      <HintPath>..\References\StockSharp.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="StockSharp.Xaml.Charting">
+      <HintPath>..\References\StockSharp.Xaml.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\References\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\References\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\References\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\References\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\References\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Strategies\AvgPriceQuotingStrategy.cs" />
+    <Compile Include="Strategies\Base\BaseStrategy.cs" />
+    <Compile Include="ConnectionEngine.cs" />
+    <Compile Include="OrderType.cs" />
+    <Compile Include="Strategies\HustleEveryDayStrategy.cs" />
+    <Compile Include="Xaml\StrategiesInfoGrid.xaml.cs">
+      <DependentUpon>StrategiesInfoGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Converters\LogVisibilityConverter.cs" />
+    <Compile Include="Xaml\Converters\PathToDirectoryNameConverter.cs" />
+    <Compile Include="Xaml\Converters\ProcessStateToColorConverter.cs" />
+    <Compile Include="SettingsEngine.cs" />
+    <Compile Include="SettingsProperties.cs" />
+    <Compile Include="Xaml\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strategies\Base\BaseShellTestingProperties.cs" />
+    <Compile Include="Xaml\StrategyDocument.xaml.cs">
+      <DependentUpon>StrategyDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\ScheduleEditor.xaml.cs">
+      <DependentUpon>ScheduleEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strategies\Base\BaseShellStrategy.cs" />
+    <Compile Include="Strategies\Base\BaseShellStrategyProperties.cs" />
+    <Compile Include="SubscriptionEngine.cs" />
+    <Compile Include="Xaml\TestingDocument.xaml.cs">
+      <DependentUpon>TestingDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeRangeProperties.cs" />
+    <Compile Include="WindowPreferences.cs" />
+    <Compile Include="Strategies\RobotStrategy.cs" />
+    <Compile Include="Strategies\RobotStrategyProperties.cs" />
+    <Compile Include="Strategies\RobotTestingProperties.cs" />
+    <Page Include="Xaml\StrategiesInfoGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xaml\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Xaml\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xaml\StrategyDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\ScheduleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Xaml\TestingDocument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\References\stocksharp.ico">
+      <Link>stocksharp.ico</Link>
+    </Resource>
+    <Content Include="log4net.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBaseShellStrategyProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BaseShellStrategyProperties>
+    <Name>Новая стратегия 1</Name>
+    <Security>
+      <Id>SIU2@RTS</Id>
+      <Name />
+      <ShortName />
+      <Code />
+      <Class />
+      <PriceStep>0.01</PriceStep>
+      <VolumeStep>1</VolumeStep>
+      <Multiplier>1</Multiplier>
+      <Decimals>2</Decimals>
+      <Type xsi:nil="true" />
+      <ExpiryDate xsi:nil="true" />
+      <SettlementDate xsi:nil="true" />
+      <UnderlyingSecurityId />
+      <OptionType xsi:nil="true" />
+      <Strike>0</Strike>
+      <Currency xsi:nil="true" />
+      <ExternalId>
+        <InteractiveBrokers xsi:nil="true" />
+      </ExternalId>
+    </Security>
+    <Portfolio>
+      <BeginValue>0</BeginValue>
+      <CurrentValue>0</CurrentValue>
+      <BlockedValue>0</BlockedValue>
+      <VariationMargin>0</VariationMargin>
+      <Commission>0</Commission>
+      <LastChangeTime />
+      <LocalTime>0001-01-01T00:00:00</LocalTime>
+      <Name>SPBFUT00622</Name>
+      <Leverage>0</Leverage>
+      <Currency xsi:nil="true" />
+      <State xsi:nil="true" />
+    </Portfolio>
+    <Volume>1</Volume>
+    <RestorePositionsOnStart>true</RestorePositionsOnStart>
+    <SchedulerIsEnabled>false</SchedulerIsEnabled>
+    <Schedule />
+    <OrdersByTransactionId />
+    <SecuritiesByTransactionId />
+    <TradesByTransactionId />
+    <PortfoliosByTransactionId />
+    <ExchangesByTransactionId />
+  </BaseShellStrategyProperties>
+  <BaseShellStrategyProperties>
+    <Name>Новая стратегия 2</Name>
+    <Security>
+      <Id>SIU2@RTS</Id>
+      <Name />
+      <ShortName />
+      <Code />
+      <Class />
+      <PriceStep>0.01</PriceStep>
+      <VolumeStep>1</VolumeStep>
+      <Multiplier>1</Multiplier>
+      <Decimals>2</Decimals>
+      <Type xsi:nil="true" />
+      <ExpiryDate xsi:nil="true" />
+      <SettlementDate xsi:nil="true" />
+      <UnderlyingSecurityId />
+      <OptionType xsi:nil="true" />
+      <Strike>0</Strike>
+      <Currency xsi:nil="true" />
+      <ExternalId>
+        <InteractiveBrokers xsi:nil="true" />
+      </ExternalId>
+    </Security>
+    <Portfolio>
+      <BeginValue>0</BeginValue>
+      <CurrentValue>0</CurrentValue>
+      <BlockedValue>0</BlockedValue>
+      <VariationMargin>0</VariationMargin>
+      <Commission>0</Commission>
+      <LastChangeTime />
+      <LocalTime>0001-01-01T00:00:00</LocalTime>
+      <Name>SPBFUT00622</Name>
+      <Leverage>0</Leverage>
+      <Currency xsi:nil="true" />
+      <State xsi:nil="true" />
+    </Portfolio>
+    <Volume>1</Volume>
+    <RestorePositionsOnStart>true</RestorePositionsOnStart>
+    <SchedulerIsEnabled>false</SchedulerIsEnabled>
+    <Schedule />
+    <OrdersByTransactionId />
+    <SecuritiesByTransactionId />
+    <TradesByTransactionId />
+    <PortfoliosByTransactionId />
+    <ExchangesByTransactionId />
+  </BaseShellStrategyProperties>
+  <BaseShellStrategyProperties>
+    <Name>Новая стратегия 3</Name>
+    <Security>
+      <Id>SIU2@RTS</Id>
+      <Name />
+      <ShortName />
+      <Code />
+      <Class />
+      <PriceStep>0.01</PriceStep>
+      <VolumeStep>1</VolumeStep>
+      <Multiplier>1</Multiplier>
+      <Decimals>2</Decimals>
+      <Type xsi:nil="true" />
+      <ExpiryDate xsi:nil="true" />
+      <SettlementDate xsi:nil="true" />
+      <UnderlyingSecurityId />
+      <OptionType xsi:nil="true" />
+      <Strike>0</Strike>
+      <Currency xsi:nil="true" />
+      <ExternalId>
+        <InteractiveBrokers xsi:nil="true" />
+      </ExternalId>
+    </Security>
+    <Portfolio>
+      <BeginValue>0</BeginValue>
+      <CurrentValue>0</CurrentValue>
+      <BlockedValue>0</BlockedValue>
+      <VariationMargin>0</VariationMargin>
+      <Commission>0</Commission>
+      <LastChangeTime />
+      <LocalTime>0001-01-01T00:00:00</LocalTime>
+      <Name>SPBFUT00622</Name>
+      <Leverage>0</Leverage>
+      <Currency xsi:nil="true" />
+      <State xsi:nil="true" />
+    </Portfolio>
+    <Volume>1</Volume>
+    <RestorePositionsOnStart>true</RestorePositionsOnStart>
+    <SchedulerIsEnabled>false</SchedulerIsEnabled>
+    <Schedule />
+    <OrdersByTransactionId />
+    <SecuritiesByTransactionId />
+    <TradesByTransactionId />
+    <PortfoliosByTransactionId />
+    <ExchangesByTransactionId />
+  </BaseShellStrategyProperties>
+</ArrayOfBaseShellStrategyProperties>
